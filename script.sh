@@ -43,6 +43,7 @@ while true; do
                 dnf update -y -q 
                 dnf install -y -q $apps
                 flatpak install flathub $appflatpack -y > /dev/null 2>&1
+                reboot
             fi 
             exit 0
             ;;
