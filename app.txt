@@ -1,0 +1,17 @@
+code
+steam
+evolution
+qt-creator
+gnome-shell-extension-appindicator
+gnome-shell-extension-gsconnect
+gnome-shell-extension-dash-to-dock
+gnome-tweaks
+gnome-extensions-app
+libreoffice
+firefox
+gnome-boxes
+gimp
+webapp-manager
+htop
+epiphany
+vlc

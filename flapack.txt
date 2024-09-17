@@ -1,0 +1,3 @@
+io.github.shiftey.Desktop
+com.discordapp.Discord
+io.missioncenter.MissionCenter
