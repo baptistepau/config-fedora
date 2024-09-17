@@ -16,3 +16,5 @@ htop
 epiphany
 vlc
 adw-gtk3-theme
+discord
+gedit
