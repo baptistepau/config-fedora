@@ -18,3 +18,17 @@ vlc
 adw-gtk3-theme
 discord
 gedit
+python3-devel
+gcc 
+python3-pip
+zlib-devel 
+libjpeg-devel 
+openjpeg2-devel 
+libtiff-devel 
+libwebp-devel 
+freetype-devel 
+lcms2-devel 
+libxml2-devel 
+libxslt-devel
+python3-pillow
+python3-pillow-devel
