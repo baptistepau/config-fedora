@@ -1,2 +1,3 @@
 io.github.shiftey.Desktop
 io.missioncenter.MissionCenter
+org.gnome.Todo
