@@ -34,3 +34,4 @@ python3-pillow
 python3-pillow-devel
 gpaste-ui
 gnome-shell-extension-gpaste
+solaar
