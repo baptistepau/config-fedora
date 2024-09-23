@@ -32,3 +32,5 @@ libxml2-devel
 libxslt-devel
 python3-pillow
 python3-pillow-devel
+gpaste-ui
+gnome-shell-extension-gpaste
