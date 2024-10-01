@@ -17,7 +17,7 @@ epiphany
 vlc
 adw-gtk3-theme
 discord
-gedit
+gnome-text-editor 
 python3-devel
 gcc 
 python3-pip
