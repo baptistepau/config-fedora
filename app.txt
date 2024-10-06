@@ -37,3 +37,8 @@ gnome-shell-extension-gpaste
 solaar
 python3-pillow-tk
 chromium
+virt-manager
+virt-viewer
+samba 
+samba-client 
+samba-common
