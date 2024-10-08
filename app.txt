@@ -42,3 +42,4 @@ virt-viewer
 samba 
 samba-client 
 samba-common
+remmina
