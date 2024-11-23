@@ -9,7 +9,6 @@ gnome-tweaks
 gnome-extensions-app
 libreoffice
 firefox
-gnome-boxes
 gimp
 webapp-manager
 htop
@@ -43,3 +42,5 @@ samba
 samba-client 
 samba-common
 remmina
+cmark 
+cmark-devel
