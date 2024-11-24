@@ -2,7 +2,7 @@
 while true; do
     echo "Menu de choix:"
     echo "1. Installer les depot"
-    echo "2. Installer les application"
+    echo "2. Installer et supprimer les application"
     echo "3. Mettre a jour le systeme"
     echo "4. Quitter"
     
@@ -39,7 +39,9 @@ while true; do
                 exit 1
             else 
                 apps=$(grep -v '^#' app.txt | tr '\n' ' ')
+                suppr=$(grep -v '^#' remove.txt | tr '\n' ' ')
                 appflatpack=$(grep -v '^#' flapack.txt | tr '\n' ' ')
+                dnf remove -y -q $suppr
                 dnf update -y -q 
                 dnf install -y -q $apps
                 flatpak install flathub $appflatpack -y > /dev/null 2>&1

@@ -10,7 +10,6 @@ gnome-extensions-app
 libreoffice
 firefox
 gimp
-webapp-manager
 htop
 epiphany
 vlc
