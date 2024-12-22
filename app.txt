@@ -34,7 +34,6 @@ gpaste-ui
 gnome-shell-extension-gpaste
 solaar
 python3-pillow-tk
-chromium
 virt-manager
 virt-viewer
 samba 
@@ -43,3 +42,10 @@ samba-common
 remmina
 cmark 
 cmark-devel
+mysql-server
+php
+httpd 
+python3-pyaudio 
+alsa-utils 
+jack-audio-connection-kit
+portaudio-devel
