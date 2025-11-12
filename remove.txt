@@ -1,2 +1,5 @@
 gnome-boxes
 gnome-maps
+gnome-weather
+rhythmbox
+totem

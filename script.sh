@@ -16,18 +16,22 @@ while true; do
                 echo "Veuillez réessayer avec: sudo $0"
             else 
                 echo "Installation de depot"
+                sudo dnf install dnf-plugins-core -y -q
                 sudo dnf install --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y -q
                 sudo dnf install --nogpgcheck https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y -q
-                dnf install --nogpgcheck https://github.com/rpmsphere/noarch/raw/master/r/rpmsphere-release-38-1.noarch.rpm -y -q
+                sudo rpm --import https://rpm.packages.shiftkey.dev/gpg.key
+                dnf install --nogpgcheck https://github.com/rpmsphere/noarch/raw/master/r/rpmsphere-release-40-1.noarch.rpm  -y -q
                 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
                 rpm --import https://packages.microsoft.com/keys/microsoft.asc
+                sudo sh -c 'echo -e "[shiftkey-packages]\nname=GitHub Desktop\nbaseurl=https://rpm.packages.shiftkey.dev/rpm/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://rpm.packages.shiftkey.dev/gpg.key" > /etc/yum.repos.d/shiftkey-packages.repo'
                 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
                 dnf clean all
                 dnf install rpmfusion-free-appstream-data -y -q
                 dnf install rpmfusion-nonfree-appstream-data -y -q
                 dnf install rpmfusion-free-release-tainted -y -q
                 dnf install rpmfusion-nonfree-release-tainted -y -q
-                dnf check-update -q
+                dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+		        dnf check-update -q
                 echo "Depot installer"
             fi
             exit 0
