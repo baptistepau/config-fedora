@@ -16,7 +16,7 @@ while true; do
                 echo "Veuillez réessayer avec: sudo $0"
             else 
                 echo "Installation de depot"
-                sudo dnf install dnf-plugins-core -y -q
+                sudo dnf install dnf-plugins-core fedora-workstation-repositories -y -q
                 sudo dnf install --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y -q
                 sudo dnf install --nogpgcheck https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y -q
                 sudo rpm --import https://rpm.packages.shiftkey.dev/gpg.key
@@ -30,8 +30,15 @@ while true; do
                 dnf install rpmfusion-nonfree-appstream-data -y -q
                 dnf install rpmfusion-free-release-tainted -y -q
                 dnf install rpmfusion-nonfree-release-tainted -y -q
+                sudo sh -c  'echo "[antigravity-rpm]
+                name=Antigravity RPM Repository
+                baseurl=https://us-central1-yum.pkg.dev/projects/antigravity-auto-updater-dev/antigravity-rpm
+                enabled=1
+                gpgcheck=0" > /etc/yum.repos.d/antigravity.repo'
                 dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
-		        dnf check-update -q
+		        dnf config-manager --set-enabled google-chrome
+                dnf makecache -q
+                dnf check-update -q
                 echo "Depot installer"
             fi
             exit 0
