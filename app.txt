@@ -1,4 +1,5 @@
 code
+antigravity
 steam
 qt-creator
 gnome-shell-extension-appindicator
@@ -49,7 +50,7 @@ libimagequant-devel
 tcl-devel
 tk-devel
 qt6-qtwebsockets-devel
-chromium
+google-chrome-stable
 alsa-lib 
 alsa-plugins-pulseaudio 
 jack-audio-connection-kit
@@ -60,3 +61,12 @@ docker-ce-cli
 containerd.io 
 docker-buildx-plugin 
 docker-compose-plugin
+intel-compute-runtime 
+intel-level-zero
+intel-gpu-tools
+vulkan-tools
+libva-utils
+mesa-vulkan-drivers 
+mesa-vulkan-drivers.i686 
+intel-media-driver
+gamemode
