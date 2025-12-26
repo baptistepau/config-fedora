@@ -30,13 +30,10 @@ while true; do
                 dnf install rpmfusion-nonfree-appstream-data -y -q
                 dnf install rpmfusion-free-release-tainted -y -q
                 dnf install rpmfusion-nonfree-release-tainted -y -q
-                sudo sh -c  'echo "[antigravity-rpm]
-                name=Antigravity RPM Repository
-                baseurl=https://us-central1-yum.pkg.dev/projects/antigravity-auto-updater-dev/antigravity-rpm
-                enabled=1
-                gpgcheck=0" > /etc/yum.repos.d/antigravity.repo'
+                sudo sh -c 'echo -e "[antigravity-rpm]\nname=Antigravity RPM Repository\nbaseurl=https://us-central1-yum.pkg.dev/projects/antigravity-auto-updater-dev/antigravity-rpm\nenabled=1\ngpgcheck=0" > /etc/yum.repos.d/antigravity.repo'
                 dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 		        dnf config-manager --set-enabled google-chrome
+                sudo dnf config-manager addrepo --from-repofile https://download.docker.com/linux/fedora/docker-ce.repo
                 dnf makecache -q
                 dnf check-update -q
                 echo "Depot installer"
