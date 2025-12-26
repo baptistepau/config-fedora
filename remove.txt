@@ -3,3 +3,8 @@ gnome-maps
 gnome-weather
 rhythmbox
 totem
+gnome-snapshot
+mediawriter
+showtime
+evince
+evolution
