@@ -23,7 +23,6 @@ while true; do
                 dnf install --nogpgcheck https://github.com/rpmsphere/noarch/raw/master/r/rpmsphere-release-40-1.noarch.rpm  -y -q
                 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
                 rpm --import https://packages.microsoft.com/keys/microsoft.asc
-                sudo sh -c 'echo -e "[shiftkey-packages]\nname=GitHub Desktop\nbaseurl=https://rpm.packages.shiftkey.dev/rpm/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://rpm.packages.shiftkey.dev/gpg.key" > /etc/yum.repos.d/shiftkey-packages.repo'
                 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
                 dnf clean all
                 dnf install rpmfusion-free-appstream-data -y -q
